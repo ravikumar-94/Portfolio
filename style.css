@@ -48,8 +48,7 @@ body{
 
 }
 
-.navbar a:hover,
-.navbar a.active{
+.navbar a:hover {
     color: #0ef;
 }
 
@@ -187,5 +186,110 @@ body{
     100%{
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+
+/*********************** About *****************************/
+
+.about{
+    margin-top: 90px;
+}
+.heading{
+    text-align: center;
+    opacity: 0;
+    text-shadow: 2px 2px 2px  #0ef;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.5s;
+    text-decoration:#0ef;
+
+}
+
+/*********************** Contact Us ***********************/
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title h2{
+    font-weight: 600;
+    color: #0ef;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #0ef;
+    border-radius: 10px;
+    margin-bottom: 20px;  
+}
+
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus{
+    border: 1px solid #0ef;
+    box-shadow: 0 0 10px #0ef;
+}
+
+.contact-inputs::placeholder{
+    color: #a9a9a9;
+}
+
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 5px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg , #ff994f , #fa6d86);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(227, 196, 85);
+}
+
+.contact-left button img{
+    height: 25px;
+    margin: 10px;
+}
+
+.contact-right img{
+    width: 300px;
+}
+
+@media (max-width:800px){
+    .contact-inputs{
+        width: 80vw;
+    }
+    .contact-right{
+        display: none;
     }
 }
